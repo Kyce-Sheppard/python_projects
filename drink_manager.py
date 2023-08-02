@@ -13,7 +13,7 @@ def view_drink():
     with open('drink_recipes.txt', 'r') as f:
         for line in f.readlines():
             drink_name, drink_type, drink_link = line.strip().split('|')
-            print(f"Drink: {drink_name}| Base spirit: {drink_type}| Link: {drink_link}")
+            print(f"Drink: {drink_name.title()}| Base spirit: {drink_type.title()}| Link: {drink_link}")
             drink_recipes.append({
                 'drink_name': drink_name,
                 'drink_type': drink_type,
