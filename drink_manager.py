@@ -11,7 +11,7 @@ def add_drink():
 def view_drink():
     drink_recipes = []
     with open('drink_recipes.txt', 'r') as f:
-        for line in f.readlines():
+        for line in sorted(f.readlines()):
             drink_name, drink_type, drink_link = line.strip().split('|')
             print(f"Drink: {drink_name.title()}| Base spirit: {drink_type.title()}| Link: {drink_link}")
             drink_recipes.append({
