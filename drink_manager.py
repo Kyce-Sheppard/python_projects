@@ -6,7 +6,7 @@ def add_drink():
     drink_link = input("Paste the link: ")
 
     with open('drink_recipes.txt', 'a') as f:
-        f.write(f"{drink_name} | {drink_type} | {drink_link}\n")
+        f.write(f"{drink_name.title()} | {drink_type.lower()} | {drink_link}\n")
 
 def view_drink():
     drink_recipes = []
